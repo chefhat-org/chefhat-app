@@ -1,0 +1,8 @@
+{
+  "name": "chefhat-frontend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/chefhat-frontend",
+  "projectType": "application",
+  "targets": {},
+  "tags": []
+}
