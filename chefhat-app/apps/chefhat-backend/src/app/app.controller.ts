@@ -10,4 +10,6 @@ export class AppController {
   async getRecipeById(@Param('id') id: string) {
     return this.recipeService.recipe({ id: Number(id) });
   }
+
+  //TODO: add other endpoints here
 }
