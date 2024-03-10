@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { DataAccessRecipesModule } from '@chefhat-app/data-access-recipes';
 
 @Module({
-  imports: [],
+  imports: [DataAccessRecipesModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [],
 })
 export class AppModule {}

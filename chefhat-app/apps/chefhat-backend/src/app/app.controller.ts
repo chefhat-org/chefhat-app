@@ -1,13 +1,13 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 
-import { AppService } from './app.service';
+import { RecipeService } from '@chefhat-app/data-access-recipes';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly recipeService: RecipeService) {}
 
-  @Get()
-  getData() {
-    return this.appService.getData();
+  @Get('recipes/:id')
+  async getRecipeById(@Param('id') id: string) {
+    return this.recipeService.recipe({ id: Number(id) });
   }
 }
