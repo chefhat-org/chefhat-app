@@ -17,6 +17,7 @@
     ],
     "sharedGlobals": []
   },
+  "defaultBase": "master",
   "plugins": [
     {
       "plugin": "@nx/next/plugin",
