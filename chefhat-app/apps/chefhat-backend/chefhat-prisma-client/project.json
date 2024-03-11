@@ -1,8 +1,0 @@
-{
-  "name": "chefhat-prisma-client",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/chefhat-backend/chefhat-prisma-client/src",
-  "projectType": "library",
-  "targets": {},
-  "tags": []
-}

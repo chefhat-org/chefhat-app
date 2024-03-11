@@ -1,0 +1,24 @@
+{
+  "name": "chefhat-backend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/chefhat-backend/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "chefhat-backend:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "chefhat-backend:build:development"
+        },
+        "production": {
+          "buildTarget": "chefhat-backend:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
