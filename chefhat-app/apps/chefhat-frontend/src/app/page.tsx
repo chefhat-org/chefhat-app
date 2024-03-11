@@ -1,6 +1,26 @@
 import styles from './page.module.scss';
 
-export default function Index() {
+type Recipe = {
+  id: number
+  name: string
+  description: string
+}
+
+const path: String = 'http://127.0.0.1:3000'
+
+
+async function getRecipe() {
+  const res = await fetch(`${path}/api/recipes/1`, { cache: 'no-store' })
+
+  const recipe: Recipe = await res.json()
+ 
+  return recipe
+}
+
+
+export default async function Index() {
+
+  const recipe = await getRecipe()
   /*
    * Replace the elements below with your own.
    *
@@ -14,6 +34,9 @@ export default function Index() {
             <h1>
               <span> Hello there, </span>
               Welcome chefhat-frontend 👋
+              <p>Recipe Id: {recipe.id}</p>
+              <p>Recipe name: {recipe.name}</p>
+              <p>Recipe description: {recipe.description}</p>
             </h1>
           </div>
 
