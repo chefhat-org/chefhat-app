@@ -1,4 +1,5 @@
 import styles from './page.module.scss';
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 type Recipe = {
   id: number
@@ -39,6 +40,7 @@ export default async function Index() {
               <p>Recipe description: {recipe.description}</p>
             </h1>
           </div>
+          <Button colorScheme='blue'>Button coming from Chakra UI</Button>
 
           <div id="hero" className="rounded">
             <div className="text-container">
