@@ -1,0 +1,8 @@
+{
+  "name": "data-access-recipes",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/chefhat-backend/data-access-recipes/src",
+  "projectType": "library",
+  "targets": {},
+  "tags": []
+}

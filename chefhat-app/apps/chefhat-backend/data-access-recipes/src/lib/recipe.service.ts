@@ -1,7 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import {
-    PrismaService,
-  } from '@chefhat-app/chefhat-prisma-client';
+import { PrismaService } from '@chefhat-app/chefhat-prisma-client';
 import { Prisma, Recipe } from '@prisma/client';
 
 @Injectable()

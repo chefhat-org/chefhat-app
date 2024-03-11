@@ -16,13 +16,13 @@
     "baseUrl": ".",
     "paths": {
       "@chefhat-app/chefhat-prisma-client": [
-        "libs/chefhat-prisma-client/src/index.ts"
+        "apps/chefhat-backend/chefhat-prisma-client/src/index.ts"
       ],
       "@chefhat-app/chefhat-prisma-schema": [
         "chefhat-prisma-schema/src/index.ts"
       ],
       "@chefhat-app/data-access-recipes": [
-        "libs/data-access-recipes/src/index.ts"
+        "apps/chefhat-backend/data-access-recipes/src/index.ts"
       ]
     }
   },
