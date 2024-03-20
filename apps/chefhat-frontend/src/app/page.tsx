@@ -1,27 +1,24 @@
 import styles from './page.module.scss';
-import { Button, ButtonGroup } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react';
 
 type Recipe = {
-  id: number
-  name: string
-  description: string
-}
+  id: number;
+  name: string;
+  description: string;
+};
 
-const path: String = 'http://127.0.0.1:3000'
-
+const path = 'http://127.0.0.1:3000';
 
 async function getRecipe() {
-  const res = await fetch(`${path}/api/recipes/1`, { cache: 'no-store' })
+  const res = await fetch(`${path}/api/recipes/1`, { cache: 'no-store' });
 
-  const recipe: Recipe = await res.json()
- 
-  return recipe
+  const recipe: Recipe = await res.json();
+
+  return recipe;
 }
 
-
 export default async function Index() {
-
-  const recipe = await getRecipe()
+  const recipe = await getRecipe();
   /*
    * Replace the elements below with your own.
    *
@@ -40,7 +37,7 @@ export default async function Index() {
               <p>Recipe description: {recipe.description}</p>
             </h1>
           </div>
-          <Button colorScheme='blue'>Button coming from Chakra UI</Button>
+          <Button colorScheme="blue">Button coming from Chakra UI</Button>
 
           <div id="hero" className="rounded">
             <div className="text-container">
