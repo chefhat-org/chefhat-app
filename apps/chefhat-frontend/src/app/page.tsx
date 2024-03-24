@@ -17,22 +17,6 @@ async function getRecipe() {
   return recipe;
 }
 
-async function getRecipetestDupe2() {
-  const res = await fetch(`${path}/api/recipes/1`, { cache: 'no-store' });
-
-  const recipe: Recipe = await res.json();
-
-  return recipe;
-}
-
-async function getRecipetestDupe3() {
-  const res = await fetch(`${path}/api/recipes/1`, { cache: 'no-store' });
-
-  const recipe: Recipe = await res.json();
-
-  return recipe;
-}
-
 export default async function Index() {
   const recipe = await getRecipe();
   /*
