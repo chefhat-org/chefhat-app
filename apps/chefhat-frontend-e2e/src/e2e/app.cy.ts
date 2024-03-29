@@ -1,13 +1,9 @@
 import { getGreeting } from '../support/app.po';
 
-describe('chefhat-frontend-e2e', () => {
-  beforeEach(() => cy.visit('/'));
+describe('Chefhat Home Page', () => {
+  it('successfully loads', () => {
+    cy.visit('http://127.0.0.1:3000');
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains(/Welcome/);
+    getGreeting().contains(/Chefhat/);
   });
 });
