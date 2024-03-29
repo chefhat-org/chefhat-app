@@ -10,11 +10,18 @@ type Recipe = {
 const path = 'http://127.0.0.1:3000';
 
 async function getRecipe() {
-  const res = await fetch(`${path}/api/recipes/1`, { cache: 'no-store' });
-
-  const recipe: Recipe = await res.json();
-
-  return recipe;
+  try {
+    const response = await fetch(`${path}/api/recipes/1`, {
+      cache: 'no-store',
+    });
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const recipe: Recipe = await response.json();
+    return recipe;
+  } catch (error: unknown) {
+    console.log('There has been a problem with your fetch operation: ', error);
+  }
 }
 
 export default async function Index() {
@@ -27,9 +34,9 @@ export default async function Index() {
           <div id="welcome">
             <h1>
               Chefhat
-              <p>Recipe Id: {recipe.id}</p>
-              <p>Recipe name: {recipe.name}</p>
-              <p>Recipe description: {recipe.description}</p>
+              <p>Recipe Id: {recipe?.id}</p>
+              <p>Recipe name: {recipe?.name}</p>
+              <p>Recipe description: {recipe?.description}</p>
             </h1>
           </div>
           <Button colorScheme="blue">Button coming from Chakra UI</Button>
